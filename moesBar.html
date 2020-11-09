@@ -1,0 +1,76 @@
+<!doctype HTML>
+<html>
+<head>
+    <title>Moes Bar</title>
+    <script>
+       function serveDrink(){
+           var day = document.getElementById("day").value;
+           var month = document.getElementById("month").value;
+           var year = document.getElementById("year").value;
+           
+           var bDay = new Date(year, month-1, day, 23, 59, 59, 999);
+            alert(bDay.getTime());
+           var today = new Date();
+           
+           //  alert(today);
+           var seconds = today - bDay.getTime();
+           //alert(milliseconds);
+           var age = Math.floor(seconds / (365 * 24 * 60 * 60 * 1000));
+           document.getElementById("yourAge").innerHTML = age + " years old";
+          // alert(age);
+           
+           if(age >= 21)
+               {
+                   document.getElementById("yourDrink").innerHTML = "Duffs Beer";
+                   document.getElementById("drinkImage").src="images/duff.jpg"; 
+               }
+           else if(age >=3 && age < 21){
+               document.getElementById("yourDrink").innerHTML = "Have some pop";
+               document.getElementById("drinkImage").src="images/simpsonCola.jpg"; 
+           }
+            else{
+                 document.getElementById("yourDrink").innerHTML = "Have some malk";
+                 document.getElementById("drinkImage").src="images/Malk.jpg"; 
+            }
+       }
+    </script>
+</head>
+<body>
+    <h1>Moes Bar</h1>
+    <form name="getBirthDate" id="getBirthDate" action="#">
+        <select id="month">
+            <option value=0>Month</option> 
+            
+            <script>
+                for(x=1; x <=12; x++){
+                    document.write("<option>" + x + "</option>")
+                }
+            </script>
+            
+        </select>
+        /
+        <select id="day">
+            <option value=0>Day</option>
+            <script>
+                
+                for(x=1; x <=31; x++){
+                    document.write("<option>" + x + "</option>")
+                }
+            </script>
+        </select>
+        /
+        <select id="year">
+            <option value=0>Year</option> 
+            <script>
+                for(x=2017; x >= 1901 ; x--){
+                    document.write("<option>" + x + "</option>")
+                }
+            </script>
+        </select>
+    </form>
+   <button onclick="serveDrink();">Get a drink</button>
+    <h2 id="yourAge"></h2>
+    <h2 id="yourDrink"></h2>
+    <img src="" id="drinkImage" height="400">
+</body>
+</html>

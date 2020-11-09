@@ -1,0 +1,33 @@
+body {
+    background-color: #cdb879;
+    color: #06425c;
+}
+
+p{
+    font-size: 1.2em;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+footer{
+    text-align: right;
+    font-size: .75em;
+    border-top: 2pt solid #06424c;
+    background-color: #ffffff;
+}
+
+main{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2pt solid #06424c;
+    border-radius: 33pt;
+    padding: 1.7em;
+    margin-bottom: 2em;
+    background-color: #06425c;
+    color: #cdb879;
+}
+
+h1, h2{
+    color: #51a39d;
+}
