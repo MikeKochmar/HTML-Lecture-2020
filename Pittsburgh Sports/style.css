@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Prata&family=Titillium+Web:ital@1&display=swap');
+
+body {
+    background-color: #101820;
+    color: rgb(255,182,18);
+    font-family: 'Titillium Web', sans-serif;
+}
+
+a {
+    color: rgb(165, 172, 175);
+}
+
+
+nav a {
+    color: rgb(165, 172, 175);
+    width:16%;
+    display: inline-block;
+    text-align: center;
+    height: 3em;
+    vertical-align: center;
+    border: 1pt solid  rgb(255,182,18);
+    border-radius: 23pt;
+    padding-top: 1.7em;
+}
+
+nav a:hover {
+    text-decoration: none;
+    font-size: 1.3em;
+}
+
+
+h1, h2 {
+    color: #ffffff;
+    font-family: "impact", "sans-serif";
+    font-family: 'Prata', serif;
+}
+
+
+
+
+
+/*pseudo class
+a:visited{
+    color: rgb(255,255,255)
+}*/
